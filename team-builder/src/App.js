@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import logo from "./logo.svg";
-
+import Team from "./component/team";
 import "./App.css";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <h1>Team Build</h1>
-      
+      <Team team={team} />
     </div>
   );
 }
