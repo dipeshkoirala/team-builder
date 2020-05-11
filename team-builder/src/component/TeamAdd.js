@@ -36,7 +36,7 @@ const TeamAdd = (props) => {
           type="text"
           id="fullname"
           name="fullName"
-          value="test"
+          value={member.fullName}
         />
 
         <label>Email ID:</label>
@@ -46,7 +46,7 @@ const TeamAdd = (props) => {
           type="text"
           id="email"
           name="email"
-          value="test"
+          value={member.email}
         />
 
         <label>Information</label>
@@ -55,7 +55,7 @@ const TeamAdd = (props) => {
           onChange={handleChanges}
           id="info"
           name="info"
-          value="test"
+          value={member.info}
         />
         <button type="submit">Add Note</button>
       </form>
