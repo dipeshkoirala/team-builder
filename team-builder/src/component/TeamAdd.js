@@ -13,10 +13,16 @@ const TeamAdd = (props) => {
     console.log(member);
   };
 
+  const submitForm = (event) => {
+    event.preventDefault();
+    props.addNewTeam(member);
+    addMember({ fullName: "", email: "", info: "" });
+  };
+
   return (
     <div className="form-wrapper">
       <h1>This section is for adding Team</h1>;
-      <form>
+      <form className="first" onSubmit={submitForm}>
         <label htmlFor="title">
           <strong>Date: </strong>
         </label>

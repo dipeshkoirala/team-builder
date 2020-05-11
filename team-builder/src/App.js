@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <h1>Team Build</h1>
-      <TeamAdd />
+      <TeamAdd addNewTeam={addNewTeam} />
       <Team team={team} />
     </div>
   );
