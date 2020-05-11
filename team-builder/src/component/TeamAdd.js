@@ -1,6 +1,18 @@
-import React from "react";
-//import "../../src/index.css";
+import React, { useState } from "react";
+
 const TeamAdd = (props) => {
+  const [member, addMember] = useState({
+    date: "",
+    fullName: "",
+    email: "",
+    info: "",
+  });
+
+  const handleChanges = (event) => {
+    addMember({ ...member, [event.target.name]: event.target.value });
+    console.log(member);
+  };
+
   return (
     <div className="form-wrapper">
       <h1>This section is for adding Team</h1>;
@@ -10,6 +22,7 @@ const TeamAdd = (props) => {
         </label>
         <input
           className="firstI"
+          onChange={handleChanges}
           id="date"
           type="text"
           name="date"
@@ -19,6 +32,7 @@ const TeamAdd = (props) => {
         <label>Member Full Name:</label>
         <input
           className="firstI"
+          onChange={handleChanges}
           type="text"
           id="fullname"
           name="fullName"
@@ -28,6 +42,7 @@ const TeamAdd = (props) => {
         <label>Email ID:</label>
         <input
           className="firstI"
+          onChange={handleChanges}
           type="text"
           id="email"
           name="email"
@@ -35,7 +50,13 @@ const TeamAdd = (props) => {
         />
 
         <label>Information</label>
-        <textarea className="firstI" id="info" name="info" value="test" />
+        <textarea
+          className="firstI"
+          onChange={handleChanges}
+          id="info"
+          name="info"
+          value="test"
+        />
         <button type="submit">Add Note</button>
       </form>
     </div>
